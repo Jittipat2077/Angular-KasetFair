@@ -1,0 +1,20 @@
+
+<div class="container-index">
+    <!-- <p>ชื่อผู้ใช้ {{ this.firstname }} {{ this.lastname }} {{this.role}}</p> -->
+    <div class="zone">
+        <ng-container *ngFor="let zone of zones">
+            <div class="detail-zone">
+              <img src="../assets/img/zone/{{zone.img_showzone}}" class="img-zone">
+              <p style="font-size: 20px;">โซน {{ zone.name_zone }}</p>
+              <p class="count-boot">จำนวน {{ zone.boot_count }} บูธ</p>
+              <div class="container-button">
+                <button class="detailBoot-btn" (click)="detailBoot(zone.id_zone)"><i class="pi pi-shop"></i></button> 
+                <button class="addboot-btn" (click)="addboot(zone.id_zone)"><i class="pi pi-plus"></i></button> 
+                <button class="EditZone-btn" (click)="EditZone(zone.id_zone)"><i class="pi pi-file-edit"></i></button> 
+                <button class="deleteZone-btn" (click)="deleteZone(zone.id_zone)"><i class="pi pi-trash"></i></button> 
+              </div>
+            </div>
+          </ng-container>
+          
+    </div>
+</div>

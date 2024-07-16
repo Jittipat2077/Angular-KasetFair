@@ -1,0 +1,37 @@
+<p>name_festival</p>
+<input type="text" #name_festival>
+<br>
+<p>date_start_reservation</p>
+<input type="date" #date_start_reservation>
+<br>
+<p>date_end_reservation</p>
+<input type="date" #date_end_reservation>
+<br>
+<p>date_start_festival</p>
+<input type="date" #date_start_festival>
+<br>
+<p>date_end_festival</p>
+<input type="date" #date_end_festival>
+<br>
+<p>date_start_payment</p>
+<input type="date" #date_start_payment>
+<br>
+<p>date_end_payment</p>
+<input type="date" #date_end_payment>
+<br>
+<p>status_open_close</p>
+<input type="text" #status_open_close>
+<br>
+<p>img_mapzone</p>
+<input type="file" placeholder="รูปภาพบูธ" (change)="onFileSelected($event, 'img_mapzone')">
+<br>
+<button type="submit" 
+    (click)="AddEvent(
+    name_festival.value,
+    date_start_reservation.value,
+    date_end_reservation.value,
+    date_start_festival.value,
+    date_end_festival.value,
+    date_start_payment.value,
+    date_end_payment.value,
+    status_open_close.value)">บันทึกข้อมูล</button>

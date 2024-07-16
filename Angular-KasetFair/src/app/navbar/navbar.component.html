@@ -1,0 +1,43 @@
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <img src="../assets/img/unnamed.png" class="logo">
+  <div class="nav-header">
+      <div class="nav-title">
+        <a routerLink="/index"  style="color:#009c98 ;">ระบบจองบูธงานเกษตรเเฟร์</a>
+      </div>
+  </div>
+  <div class="nav-btn">
+      <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+      </label>
+  </div>
+  
+  <div class="nav-links">
+      <!-- ตรวจสอบว่ามีข้อมูลผู้ใช้หรือไม่ หากไม่มีให้แสดงลิงก์เข้าสู่ระบบและลงทะเบียน -->
+      <ng-container *ngIf="role === 'admin'">
+        <a><i class="pi pi-user" style="margin-right: 5px;" ></i>ชื่อผู้ใช้ {{ this.firstname }} {{  this.lastname }}</a>
+        <a routerLink="/dashboard"><i class="pi pi-server" style="margin-right: 5px;" ></i>dashboard</a>
+        <a (click)="logout()"><i class="pi pi-sign-out" style="margin-right: 5px;" ></i>ล็อคเอาท์</a>
+        <a routerLink="/list-reservation"><i class="pi pi-list-check" style="margin-right: 5px;" ></i>รายการจอง</a>
+      </ng-container>
+      <!-- <ng-container *ngIf="role === '!admin'">
+        <a routerLink="/edit-profile"><i class="fa fa-user" style="margin-right: 5px;"></i>แก้ไขข้อมูลส่วนตัว</a>
+        <a routerLink="/list-reservation"><i class="fa fa-user" style="margin-right: 5px;"></i>รายการจอง</a>
+        <a (click)="logout()"><i class="fa fa-user" style="margin-right: 5px;"></i>ล็อคเอาท์</a>
+      </ng-container> -->
+      <ng-container *ngIf="!firstname && !lastname">
+          <a routerLink="/login" ><i class="pi pi-sign-in" style="margin-right: 5px;" ></i>เข้าสู่ระบบ</a>
+          <a routerLink="/register"><i class="pi pi-user-plus" style="margin-right: 5px;"></i>สมัครสมาชิก</a>
+      </ng-container>
+      <!-- หากมีข้อมูลผู้ใช้ถูกส่งมาแล้วให้แสดงชื่อผู้ใช้ -->
+      <ng-container *ngIf="role === 'user'">
+          <a><i class="pi pi-user" style="margin-right: 5px;" ></i>ชื่อผู้ใช้ {{ this.firstname }} {{  this.lastname }}</a>
+          <!-- ตรวจสอบว่าจำเป็นต้องมีลิงก์เพิ่มเติมหรือไม่ -->
+          <a routerLink="/edit-profile"><i class="pi pi-user-edit" style="margin-right: 5px;" ></i>แก้ไขข้อมูลส่วนตัว</a>
+          <a routerLink="/list-reservation"><i class="pi pi-list-check" style="margin-right: 5px;" ></i>รายการจอง</a>
+          <a (click)="logout()"><i class="pi pi-sign-out" style="margin-right: 5px;" ></i>ล็อคเอาท์</a>
+      </ng-container>
+  </div>
+</div>

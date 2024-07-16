@@ -1,0 +1,69 @@
+
+<div class="container">
+  <ng-container *ngFor="let zone of zones">
+    <div class="con-map-boot">
+      <img src="../assets/img/zone/{{ zone.img_mapzone }}" class="map-zone">
+    </div>
+  </ng-container>
+    <div class="content-center">
+      <i class="pi pi-user" style="font-size: 1rem;"></i>
+        <p>1 ท่านจองได้เพียง 4 บูธเท่านั้น</p>
+     </div>
+  <div class="boot">
+    <ng-container *ngFor="let boot of boots">
+      <div class="detail-boot">
+        <img src="../assets/img/boot/{{ boot.img_boot }}" class="img-boot">
+        <p class="number_boot">บูธหมายเลข {{ boot.number_boot }}</p>
+        <div class="detail">
+          <p>สถานะ {{ boot.status_boot }}</p>
+          <p>ราคา {{ boot.price }} </p>
+          <p>ขนาด {{ boot.boot_size }} เมตร</p>
+        </div>
+  
+        <ng-container *ngIf="boot.status_boot === 'ว่าง'">
+          <div class="checkbox-wrapper-31">
+            <input 
+              type="checkbox" 
+              name="{{ boot.id_boot }}" 
+              id="{{ boot.id_boot }}" 
+              [checked]="selectedBootIds.includes(boot.id_boot)"
+              [disabled]="selectedBootIds.length + totalReservedBoots >= maxSelection && !selectedBootIds.includes(boot.id_boot)"
+              (change)="toggleBootSelection(boot.id_boot)"
+              (click)="checkIfDisabled($event, boot.id_boot)"
+            />
+            <svg viewBox="0 0 35.6 35.6">
+              <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+              <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+              <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+            </svg>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="boot.status_boot === 'อยู่ระหว่างตรวจสอบ'">
+          <button class="reserva-btn-wait"><i class="material-icons">info</i>อยู่ระหว่างตรวจสอบ</button>
+        </ng-container>
+        <ng-container *ngIf="boot.status_boot === 'จองเเล้ว'">
+          <button class="reserva-btn-full"><i class="material-icons">https</i>เต็ม</button>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+  
+  <div class="con-reservation-btn">
+    <button
+      (click)="reserveSelectedBoots()"
+      class="reserva-btn"
+      [ngClass]="{'disabled': isReservationFull()}"
+      [attr.disabled]="isReservationFull() ? true : null"
+  >
+      
+      <ng-container *ngIf="isReservationFull(); else normalText">
+        <i class="pi pi-times" style="color: rgb(255, 255, 255)"></i> 1 ท่านจองได้ สูงสุด 4 บูธ
+      </ng-container>
+      <ng-template #normalText>
+        <i class="pi pi-check" style="color: rgb(255, 255, 255)"></i>  ทําการจองบูธ
+      </ng-template>
+    </button>
+  </div>
+</div>
+
+

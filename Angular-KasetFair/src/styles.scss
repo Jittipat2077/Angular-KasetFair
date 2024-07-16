@@ -1,0 +1,28 @@
+@import "primeicons/primeicons.css";
+
+p{
+    font-family: 'Mitr', sans-serif;
+}
+
+*{
+    
+    box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        // outline: 0;
+        font-family: 'Mitr', sans-serif;
+        // background-color: rgb(236, 236, 236);
+
+    }
+body{
+    background-color: rgb(235, 235, 235);
+}
+    section{
+
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    a{
+        text-decoration: none;
+    }

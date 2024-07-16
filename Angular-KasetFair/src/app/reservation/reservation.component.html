@@ -1,0 +1,50 @@
+<!-- <p class="title">รายละเอียดการจอง</p>
+<ng-container *ngFor="let date_event of GetEvents">
+  {{ date_event.date_end_payment }}
+</ng-container> -->
+<div class="content-reservation">
+  <div class="boot-con">
+    <ng-container *ngFor="let boot of boots">
+    <div class="boot">
+            <img src="../assets/img/boot/{{ boot.img_boot }}" class="img-boot">
+            <div class="detail">
+              <p class="number_boot">บูธหมายเลข {{ boot.number_boot }}</p>
+              <p>ราคา {{ boot.price }}</p>
+              <p>ขนาด {{ boot.boot_size }} เมตร </p>
+          </div>
+      </div>
+    </ng-container>
+  </div>
+  
+    <div class="content-user">
+    <!-- <a><i class="fa fa-user" style="margin-right: 5px;"></i>ชื่อผู้ใช้ {{ this.firstname }} {{  this.lastname }} {{this.id}}</a> -->
+    <!-- <a><i class="fa fa-user" style="margin-right: 5px;"></i>ชื่อผู้ใช้ {{ this.firstname }} {{  this.lastname }} {{this.id}} {{this.email}} {{this.tel}}</a> -->
+    <!-- <p>ไอดี {{ this.id }}</p> -->
+    <p class="con-t" style="font-size: 18px;">ชื่อ {{ this.firstname }} นามสกุล {{  this.lastname }} </p>
+    <!-- <p>อีเมลล์ {{this.email}} </p>
+    <p>เบอร์โทร {{this.tel}} </p> -->
+    <input class="sell" placeholder="กรุณาระบุของที่ขาย" #sell>
+    <div class="promtpay-content">
+      <img src="../assets/img/detail-promtpay/head.png" class="head-promtpay">
+      <img src="../assets/img/detail-promtpay/head-title.png" class="head-title-promtpay">
+      <div *ngIf="qrCodeImageUrl">
+        <img [src]="qrCodeImageUrl" alt="QR Code" class="qr-code">
+      </div>
+      <div class="con-text">
+        <p style="padding: 0px;">สะเเกน Qr code เพื่อชําระเงินเข้าบัญชี</p>
+        <p style="padding: 0px;">บัญชี มหาวิทยาลัยเกษตรศาสตร์สกลนคร</p>
+      </div>
+      <div class="all-bank">
+            รับเงินได้จากทุกธนาคาร
+      </div>
+    </div>
+    <!-- <ng-container *ngFor="let reservation of reservations">
+      {{ reservation.boot_count }}
+    </ng-container> -->
+    <p>ราคารวมทั้งหมด {{ calculateTotalPrice() }}</p>
+    <p>อัปโหลดสลิปการโอน</p>
+    <input type="file" (change)="onFileSelected($event)" placeholder="รูปภาพสลิป">
+    <button class="reservation-btn" type="submit" [disabled]="!isReservationAllowed()" (click)="reservation(sell.value)">ทําการจอง</button>
+    </div>
+  
+</div>

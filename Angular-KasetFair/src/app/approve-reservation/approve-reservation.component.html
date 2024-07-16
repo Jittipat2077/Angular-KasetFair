@@ -1,0 +1,26 @@
+
+  <ng-template #noData>
+    <p>No data available</p>
+  </ng-template>
+  <div *ngFor="let checkReservation of approveReservations">
+    <div class="detail-checkReservations">
+      <table>
+        <tr>
+          <td>ชื่อผู้ใช้</td>
+          <td>{{ checkReservation.account[0].firstname }}</td>
+          <td>{{ checkReservation.account[0].lastname }}</td>
+          <td>{{ checkReservation.reservation.sell }}</td>
+          <button (click)="approveReservation()">อนุมัติการจอง</button>
+        </tr>
+      </table>
+      <div *ngFor="let account of checkReservation.account">
+        <div *ngFor="let boot of account.boot">
+          <p>Zone ID: {{ boot.id_zone }}</p>
+          <p>Number Boot: {{ boot.number_boot }}</p>
+          <p>Price: {{ boot.price }}</p>
+          <p>Zone Name: {{ boot.zone.name_zone }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

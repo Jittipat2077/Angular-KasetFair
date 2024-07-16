@@ -1,0 +1,49 @@
+
+<div class="container-edit">
+    <div class="input-con">
+        <div class="edit-input">
+            <i class="pi pi-shop" style="margin-right: 5px;" ></i>
+            <p>ชื่อโซน</p>
+            <input type="text" placeholder="ชื่อโซน" #name_zone>
+        </div>
+        <div class="edit-input">
+            <i class="pi pi-equals" style="margin-right: 5px;" ></i>
+            <p>รายละเอียดโซน</p>
+            <input type="text" placeholder="รายละเอียดโซน" #detail_zone>
+        </div>
+        <div class="edit-input">
+            <i class="pi pi-map" style="margin-right: 5px;" ></i>
+            <p>แผนที่บูธ</p>
+        <input type="file" placeholder="แผนที่บูธ" (change)="onFileSelected($event, 'img_mapzone')">
+        </div>
+        <div class="edit-input">
+            <i class="pi pi-image" style="margin-right: 5px;" ></i>
+            <p>โชว์</p>
+            <input type="file" placeholder="โชว์" (change)="onFileSelected($event, 'img_showzone')">
+        </div>
+
+<button class="edit" type="submit" (click)="AddZone(name_zone.value, detail_zone.value)">บันทึก</button>
+</div>
+</div>
+<div class="content-center">
+    <!-- <i class="pi pi-shop" style="font-size: 1rem;"></i> -->
+      <p>โซนที่ทําการเพิ่ม</p>
+   </div>
+
+<div class="zone">
+    <ng-container *ngFor="let zone of zones">
+        <div class="detail-zone">
+          <img src="../assets/img/zone/{{ zone.img_showzone }}" class="img-zone">
+          <p style="font-size: 20px;">โซน {{ zone.name_zone }}</p>
+          <!-- <p style="font-size: 15px;" class="detail-z">รายละเอียด {{ zone.detail_zone }}</p> -->
+          <p class="count-boot">จำนวน {{ zone.boot_count }} บูธ</p>
+          <div class="container-button">
+            <button class="detailBoot-btn" (click)="detailBoot(zone.id_zone)"><i class="pi pi-shop"></i></button> 
+            <button class="addboot-btn" (click)="addboot(zone.id_zone)"><i class="pi pi-plus"></i></button> 
+            <button class="EditZone-btn" (click)="EditZone(zone.id_zone)"><i class="pi pi-file-edit"></i></button> 
+            <button class="deleteZone-btn" (click)="deleteZone(zone.id_zone)"><i class="pi pi-trash"></i></button> 
+          </div>
+        </div>
+      </ng-container>
+
+</div>

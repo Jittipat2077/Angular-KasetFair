@@ -1,0 +1,123 @@
+.img-boot{
+    height: 200px;
+}
+.boot{
+    display: grid;
+    grid-template-columns: 19.2% 19.2% 19.2% 19.2% 19.2% ; 
+    gap: 1%
+}
+.detail-zone{
+    font-size: large;
+    color: #ffffff;
+    padding: 1% 0%;
+    text-align: center;
+    background-color:#009c98 
+}
+.EditBoot{
+    background-color: gold;
+    width: 100%;
+    color: #292929;
+    cursor: pointer;
+    border-radius: 5px;
+    border: solid 1px rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.container-btn{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 4%;
+}
+.deleteBoot{
+    background-color: rgb(192, 0, 0) ;
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    border: solid 1px rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.detail-boot{
+    padding: 5px;
+    text-align: center;
+        // padding: 0px 0px 10px 0px;
+     border-radius: 5px;
+     
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+.reservation-btn{
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px 50px;
+    width: 100%;
+    background-color:#009c98
+}
+.con-map-boot{
+    border-radius: 5px;
+    background-color: rgb(207, 207, 207);
+    height: 470px;
+    margin-bottom: 5px;
+}
+// .detail{
+//     background-color: #009c98;
+//     border-bottom:1px solid #a3a3a3;
+// }
+.detail p{
+    font-size: small;
+}
+.number_boot{
+    border-bottom:1px solid #a3a3a3;
+}
+.reserva-btn{
+    justify-content: center;
+    -ms-flex-item-align: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    color:#fff;
+    background-color:#009c98 ;
+    cursor: pointer;
+}
+.reserva-btn-wait{
+    justify-content: center;
+    -ms-flex-item-align: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    color:#000000;
+    background-color:gold ;
+    cursor: pointer;
+}
+.reserva-btn-full{
+    justify-content: center;
+    -ms-flex-item-align: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    color:#ffffff;
+    background-color:rgb(192, 0, 0) ;
+    cursor: pointer;
+}
+.reserva-btn:hover{
+    opacity: 90%;
+}
+.reserva-btn-full i{
+    font-size: 15px;
+    margin-right: 5px;
+    }
+.reserva-btn-wait i{
+    font-size: 15px;
+    margin-right: 5px;
+}
+.reserva-btn i{
+    font-size: 15px;
+    margin-right: 5px;
+}

@@ -1,0 +1,8 @@
+<p>แผนที่บูธ</p>
+<input type="file" placeholder="แผนที่บูธ" (change)="onFileSelected($event, 'img_mapzone')">
+<p>โชว์</p>
+<input type="file" placeholder="โชว์" (change)="onFileSelected($event, 'img_showzone')">
+<input type="text" placeholder="ชื่อโซน" #name_zone>
+<input type="text" placeholder="รายละเอียดโซน" #detail_zone>
+
+<button type="submit" (click)="EditZone(name_zone.value, detail_zone.value)">บันทึก</button>

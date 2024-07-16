@@ -1,0 +1,48 @@
+<ng-container *ngFor="let reservation of reservations">
+    <div class="content-list">
+      <div class="boot">
+        <ng-container *ngFor="let boot of reservation.boots">
+          <div class="detail-boot">
+            <img [src]="'../assets/img/boot/' + boot.img_boot" class="img-boot">
+            <p class="number_boot">บูธหมายเลข {{ boot.number_boot }}</p>
+            <p>ราคา {{ boot.price }}</p>
+          </div>
+        </ng-container>
+      </div>
+      <div class="reservation">
+        <div *ngIf="reservation.zone_details" class="zone-details">
+          <p>โซน: {{ reservation.zone_details.name_zone }}</p>
+        </div>
+        <p class="sell"><i class="fa fa-bullhorn" style="padding: 5px 5px;"></i>ของที่ขาย {{ reservation.sell }}</p>
+        <p class="date-reservation"><i class="material-icons">event</i>วันที่จอง {{ reservation.date_reserva }}</p>
+        <p class="date-reservation"><i class="material-icons">event</i>วันที่จ่ายเงิน {{ reservation.date_payment }}</p>
+        <p class="total_price"><i class="fa fa-money" style="padding: 5px 5px;"></i>ราคารวม {{ reservation.total_price }}</p>
+        <div class="qr-code" *ngIf="reservation.total_price">
+          <img *ngIf="qrCodeData[reservation.id_reservation]" [src]="qrCodeData[reservation.id_reservation]" alt="QR Code"/>
+        </div>
+        <ng-container *ngIf="reservation.status === 'ยังไม่ชำระเงิน'">
+          <div class="dont-pay">
+            <p><i class="material-icons">error</i>สถานะการจอง {{ reservation.status }}</p>
+            <div class="content-button">
+              เพิ่มสลิปการโอน
+              <input type="file" class="สลิป" (change)="onFileSelected($event)" placeholder="รูปภาพสลิป">
+              <button class="reservation-btn" type="submit" (click)="PayUser()">บันทึกสลิปการโอน</button>
+          </div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="reservation.status === 'อยู่ในระหว่างการตรวจสอบ'">
+          <div class="wait">
+            <p><i class="material-icons">error</i>สถานะการจอง {{ reservation.status }}</p>
+            <button class="cancel-wait"><i class="fa fa-minus-square-o" style="margin-right: 5px;"></i>ยกเลิกการจอง</button>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="reservation.status === 'ชําระเงินเเล้ว'">
+          <div class="wait">
+            <p><i class="material-icons">error</i>สถานะการจอง {{ reservation.status }}</p>
+            <button class="cancel-wait"><i class="fa fa-minus-square-o" style="margin-right: 5px;"></i>ยกเลิกการจอง</button>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+  

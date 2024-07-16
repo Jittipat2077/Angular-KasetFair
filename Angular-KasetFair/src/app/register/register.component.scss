@@ -1,0 +1,67 @@
+.conatiner-register{
+    background-color: #ffffff;
+    border-radius: 25px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.title{
+   
+    font-size: 25px;
+    color: #000000;
+    display: grid;
+}
+.register{
+
+    font-size: 25px;
+    margin-top: 15px;
+}
+.logo{
+  height:585px ;
+   width: 100%;
+    border-radius: 0px 20px 20px 0px;
+}
+input{
+    font-size: 20px;
+}
+
+.register-btn{
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 5px;
+    background-color:#009c98 ;
+    width: 100%;
+    font-size: 25px;
+    padding: 10px;
+    margin-top: 15px;
+    transition: 0.5s;
+}
+.register-btn:hover{
+    opacity: 70%;
+    border-radius: 15px;
+}
+a{
+    color: #000000;
+}
+input{
+    padding-left: 15px;
+    height: 50px;
+    border-radius: 0px 10px 10px 0px;
+    width: 100%;
+}
+.contain-input{
+    background-color: #d1d1d1;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: solid 1px rgb(209, 209, 209);
+    align-items: center;
+    display: grid;
+    grid-template-columns: 15% auto;
+}
+i{
+    color: #ffffff;
+}
+.left{
+  padding: 5% 5%;
+}

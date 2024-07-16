@@ -1,0 +1,28 @@
+<!-- <a><i class="fa fa-user" style="margin-right: 5px;"></i>ชื่อผู้ใช้ {{ this.firstname }} {{  this.lastname }} {{this.id}}</a> -->
+<ng-container *ngFor="let zone of zones">
+    <!-- <div class="detail-zone">
+      <img src="../assets/img/{{ zone.img_showzone }}" class="img-zone"> 
+    
+    </div> -->  <p>โซน {{ zone.name_zone }}</p>
+  </ng-container>
+
+  <div class="boot">
+    
+          <ng-container *ngFor="let boot of boots">
+            <div class="detail-boot">
+              <img src="../assets/img/boot/{{ boot.img_boot }}" class="img-boot">
+              <p class="number_boot">บูธหมายเลข {{ boot.number_boot }}</p>
+              <div class="detail">
+                <p>สถานะ {{ boot.status_boot }}</p>
+                <p>ราคา {{ boot.price }} </p>
+                <p> ขนาด {{ boot.boot_size }} เมตร</p>
+              </div>
+              <div class="container-btn">
+                <button (click)="EditBoot(boot.id_boot)" class="EditBoot"><i class="pi pi-file-edit"></i></button>
+                <button (click)="deleteBoot(boot.id_boot)" class="deleteBoot"><i class="pi pi-trash"></i></button>
+              </div>
+              <!-- ตรวจสอบสถานะของบูธและแสดงปุ่ม "จองบูธ" หรือ "รอการจอง" ตามเงื่อนไข -->
+              <!-- สิ้นสุดการตรวจสอบ -->
+            </div>
+          </ng-container>
+        </div>

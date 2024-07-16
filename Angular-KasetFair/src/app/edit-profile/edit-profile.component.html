@@ -1,0 +1,32 @@
+<div class="container-edit">
+    <div class="input-con">
+      <p>เเก้ไขข้อมูลผู้ใช้</p>
+        <div class="edit-input">
+            <i class="pi pi-user" style="margin-right: 5px;" ></i>
+            <p>ชื่อ</p>
+            <input type="text" placeholder="ชื่อ" [(ngModel)]="firstname">
+        </div>
+        <div class="edit-input">
+            <i class="pi pi-user" style="margin-right: 5px;" ></i>
+            <p style="font-size: 15px;">นามสกุล</p>
+            <input type="text" placeholder="นามสกุล" [(ngModel)]="lastname">
+        </div>
+        <div class="edit-input">
+            <i class="pi pi-globe" style="margin-right: 5px;" ></i>
+            <p style="font-size: 15px;">อีเมล</p>
+            <input type="text" placeholder="อีเมล" [(ngModel)]="email">
+        </div>
+
+        <div class="edit-input">
+            <i class="pi pi-phone" style="margin-right: 5px;" ></i>
+            <p style="font-size: 15px;">เบอร์โทร</p>
+            <input  type="text" placeholder="เบอร์โทร" [(ngModel)]="tel">
+        </div>
+        <button  class="edit" type="submit" (click)="edit(firstname, lastname, email, tel, id)">บันทึกการเเก้ไข</button>
+        <a routerLink="/edit-password"><button class="edit-password">เเก้ไขรหัสผ่าน</button></a>
+    </div>
+
+</div>
+
+
+

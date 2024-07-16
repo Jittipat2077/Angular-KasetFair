@@ -1,0 +1,11 @@
+<p>add-boot works!</p>
+<input type="text" placeholder="หมายเลขบูธ" #number_boot>
+<br>
+<input type="text" placeholder="ราคา" #price>
+<br>
+<input type="text" placeholder="ขนาดบูธ"#boot_size>
+<br>
+<p>รูปภาพบูธ</p>
+<input type="file" placeholder="รูปภาพบูธ" (change)="onFileSelected($event, 'img_boot')">
+<br>
+<button type="submit" (click)="AddBoot(number_boot.value,price.value,boot_size.value)" >บันทึกข้อมูล</button>

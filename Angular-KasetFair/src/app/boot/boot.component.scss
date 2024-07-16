@@ -1,0 +1,256 @@
+.img-boot{
+    height: 200px;
+}
+.boot{
+    display: grid;
+    grid-template-columns: 19.2% 19.2% 19.2% 19.2% 19.2% ; 
+    gap: 1%;
+    
+}
+.container{
+  margin-bottom: 120px;
+}
+.detail-zone{
+  
+    font-size: large;
+    color: #ffffff;
+    padding: 1% 0%;
+    text-align: center;
+    background-color:#009c98 
+}
+.map-zone{
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  width: 100%;
+  border-radius: 15px; 
+}
+.detail-boot{
+  justify-items: center;
+  display: grid;
+  row-gap: 5px;
+    padding: 5px;
+    text-align: center;
+        // padding: 0px 0px 10px 0px;
+     border-radius: 5px;
+     background-color:#ffffff ;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+.reservation-btn{
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px 50px;
+    width: 100%;
+    background-color:#009c98
+}
+.con-map-boot{
+   margin-top: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    height: 470px;
+}
+// .detail{
+//     background-color: #009c98;
+//     border-bottom:1px solid #a3a3a3;
+// }
+.detail p{
+    font-size: 15px;
+}
+
+.checkbox-wrapper-31:hover .check {
+    stroke-dashoffset: 0;
+  }
+
+  .checkbox-wrapper-31 {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+  }
+  .checkbox-wrapper-31 .background {
+    fill: #ccc;
+    transition: ease all 0.6s;
+    -webkit-transition: ease all 0.6s;
+  }
+  .checkbox-wrapper-31 .stroke {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    stroke-dashoffset: 100;
+    stroke-dasharray: 100;
+    transition: ease all 0.6s;
+    -webkit-transition: ease all 0.6s;
+  }
+  .checkbox-wrapper-31 .check {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    stroke-dashoffset: 22;
+    stroke-dasharray: 22;
+    transition: ease all 0.6s;
+    -webkit-transition: ease all 0.6s;
+  }
+  .checkbox-wrapper-31 input[type=checkbox] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+    -appearance: none;
+    -webkit-appearance: none;
+  }
+  .checkbox-wrapper-31 input[type=checkbox]:hover {
+    cursor: pointer;
+  }
+  .checkbox-wrapper-31 input[type=checkbox]:checked + svg .background {
+    fill: #6cbe45;
+  }
+  .checkbox-wrapper-31 input[type=checkbox]:checked + svg .stroke {
+    stroke-dashoffset: 0;
+  }
+  .checkbox-wrapper-31 input[type=checkbox]:checked + svg .check {
+    stroke-dashoffset: 0;
+  }
+
+  
+.checkbox-wrapper-47 input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+  }
+
+  .checkbox-wrapper-47 label {
+    position: relative;
+    padding-left: 2em;
+    padding-right: 1em;
+    line-height: 2;
+    cursor: pointer;
+    display: inline-flex;
+  }
+
+  .checkbox-wrapper-47 label:before {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    top: 0.3em;
+    left: 0;
+    display: block;
+    width: 1.4em;
+    height: 1.4em;
+    border: 2px solid #9098A9;
+    border-radius: 6px;
+    z-index: -1;
+  }
+
+  .checkbox-wrapper-47 input[type=checkbox]:checked + label {
+    padding-left: 1em;
+    color: #0f5229;
+  }
+  .checkbox-wrapper-47 input[type=checkbox]:checked + label:before {
+    top: 0;
+    width: 100%;
+    height: 2em;
+    background: #b7e6c9;
+    border-color: #2cbc63;
+  }
+
+  .checkbox-wrapper-47 label,
+  .checkbox-wrapper-47 label::before {
+    transition: 0.25s all ease;
+  }
+.number_boot{
+  width: 100%;
+    border-bottom:1px solid #a3a3a3;
+}
+.reserva-btn {
+  justify-content: center;
+  -ms-flex-item-align: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  width: 30%;
+  height: 50px;
+  color: #fff;
+  background-color: #6cbe45;
+  cursor: pointer;
+  position: fixed; /* ทำให้ปุ่มคงที่ในหน้าจอ */
+  bottom: 10px; /* ระบุตำแหน่งด้านล่าง */
+  left: 50%; /* ระบุตำแหน่งตรงกลางจากด้านซ้าย */
+  transform: translateX(-50%); /* เลื่อนปุ่มไปตรงกลาง */
+  z-index: 9999; /* ค่ามากเพื่อให้ปุ่มอยู่บนสุด */
+  transition: 0.4s;
+}
+
+.reserva-btn:hover{
+border-radius: 15px;
+}
+.reserva-btn-wait{
+    justify-content: center;
+    -ms-flex-item-align: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    color:#000000;
+    background-color:gold ;
+    cursor: pointer;
+}
+.reserva-btn-full{
+    justify-content: center;
+    -ms-flex-item-align: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    color:#ffffff;
+    background-color:rgb(168, 35, 35) ;
+    cursor: pointer;
+}
+.reserva-btn:hover{
+    opacity: 90%;
+}
+.reserva-btn-full i{
+    font-size: 15px;
+    margin-right: 5px;
+    }
+.reserva-btn-wait i{
+    font-size: 15px;
+    margin-right: 5px;
+}
+.reserva-btn i{
+    font-size: 15px;
+    margin-right: 5px;
+}
+.con-reservation-btn .reserva-btn.disabled {
+  background-color:rgb(187, 30, 30) ;
+  cursor: not-allowed;
+}
+.content-center{
+  border-radius: 5px;
+  margin-top: 2%;
+  margin-bottom: 10px;
+  background-color: white;
+  border-right: 1px  solid rgb(204, 204, 204);
+  border-left: 1px  solid rgb(204, 204, 204);
+  padding: 5px 0px;
+  justify-items: center;
+  display: grid;
+  grid-template-rows: auto auto;
+  text-align: center;
+}
+.content-center p{
+  background-color: white;
+  font-size: large;
+}
+.content-center i {
+  font-size: 25px;
+}

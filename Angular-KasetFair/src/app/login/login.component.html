@@ -1,0 +1,54 @@
+<div class="conatiner-login">
+   <form>
+   <div class="left">
+      <p class="title"><i class="fa fa-user" style="margin-right: 5px;color: #009c98 ;"></i>เข้าสู่ระบบผู้ใช้งาน</p>
+      <div class="contain-input">
+         <i class="material-icons">email</i>
+         <input type="text" placeholder="อีเมล" #email>
+      </div>
+      <div class="contain-input">
+         <i class="material-icons">lock</i>
+         <input type="password" placeholder="รหัสผ่าน" #password>
+      </div>
+      <button class="login-btn" type="submit" (click)="login(email.value, password.value)">เข้าสู่ระบบ</button>
+      <a routerLink="/register"> <p class="register">หากยังไม่ได้สมัครสมาชิกคลิก</p></a>
+   </div>
+   </form>
+   <div class="right">
+      <img src="../assets/img/logo login.jpg" class="logo">
+   </div>
+</div>
+
+<!-- <div class="content">
+   <div class="font form-logins">
+     <div >
+       <div class="login">
+         <div>
+           <p style="font-size: 30px;">เข้าสู่ระบบ</p>
+         </div>
+         <form>
+           <input type="text" name="email" placeholder="Email Address *"
+             class="form-control" #email required>
+           <input style="margin-top: 20px;" type="password" name="password"
+             placeholder="Password" class="form-control w-100"
+             #password required>
+           <div
+             style="display: flex; justify-content: start; align-items: center; margin-top: 20px;">
+             <input style type="checkbox" name="remember">
+             <label for="remember" style="margin-left: 10px; ">Remember me</label>
+           </div>
+           <button class="btn btn-primary" name="btnlogin"
+             style="width: 200px; margin-top: 20px;" (click)="login(email.value,password.value)">เข้าสู่ระบบ</button>
+           <button routerLink="/register" class="btn btn-danger" name="btnregister"
+             style="width: 200px; margin-top: 20px; margin-left: 10px;">สมัครสมาชิก</button>
+           <div style="display: flex; margin-top: 10px;">
+             <a href="#">ลืมรหัสผ่าน ?</a>
+           </div>
+         </form>
+       </div>
+     </div>
+   </div>
+   </div> -->
+
+
+   

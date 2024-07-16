@@ -1,0 +1,220 @@
+.container-edit{
+    
+    display: grid;
+    width: 100%;
+    justify-items: center;
+}
+input[type=text]{
+    margin-top: 2%;
+    height:50px;
+    width: 100%;
+    border: 1px  solid rgb(204, 204, 204);
+    border-radius: 5px;
+    padding: 5px 5px;
+    transition: 0.3s;
+}
+input[type=text]:focus,
+input[type=text]:active {
+    transition: 0.3s;
+    border: 1px  solid rgb(175, 175, 175);
+    outline: none;
+    box-shadow: rgba(75, 75, 75, 0.15) 1.95px 1.95px 2.6px;
+}
+input{
+    margin-top: 1%;
+    height:50px;
+    width: 100%;
+    border: 1px  solid rgb(204, 204, 204);
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+.input-con{
+    display: grid;
+    text-align: center;
+    padding: 2% 5%;
+    width: 100%;
+    background-color: white;
+}
+.edit-password{
+    cursor: pointer;
+    background-color: white;
+    padding: 2% 5%;
+    font-size: 15px;
+    border-bottom:  1px  solid rgb(133, 133, 133);
+}
+.edit-input{
+    text-align: left;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 5% 16% 79%;
+}
+.edit-input:focus{
+    border-color: #009c98;
+}
+.edit{
+   transition: 0.2s;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 1% 2%;
+    width: 100%;
+    color: white;
+    background-color:#009c98 ;
+}
+
+.con-map-zone{
+    margin-top: 10px;
+     border-radius: 15px;
+     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+     height: 470px;
+     margin-bottom: 5px;
+    
+ }
+ .map-zone{
+     
+     width: 100%;
+     border-radius: 15px; 
+ }
+ .img-zone{
+     width: 100%;
+     border-radius: 5px;
+     height:  225px;
+ }
+ .container-index{
+ }
+ i{
+     background: none;
+ }
+ .content-center{
+     border-radius: 5px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     background-color: white;
+     border-right: 1px  solid rgb(204, 204, 204);
+     border-left: 1px  solid rgb(204, 204, 204);
+     padding: 5px 0px;
+     justify-items: center;
+     display: grid;
+     grid-template-rows: auto auto;
+     text-align: center;
+ }
+ .content-center p{
+     background-color: white;
+     font-size: large;
+ }
+ .content-center i {
+     font-size: 25px;
+ }
+ .logo{
+     height: 50px
+ }
+ .detail-zone{
+    
+     background-color: white;
+     padding: 5px;
+ text-align: left;
+     // padding: 0px 0px 10px 0px;
+  border-radius: 5px;
+     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+ }
+ .detail-zone p {
+     padding: 3px;
+     background-color: white;
+ }
+ 
+ .reserva-btn{
+     justify-content: center;
+     -ms-flex-item-align: center;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     border-radius: 5px;
+     width: 100%;
+     height: 30px;
+     color:#fff;
+     background-color:#009c98 ;
+     cursor: pointer;
+ }
+ .reserva-btn:hover{
+    opacity: 70%;
+ }
+ .edit:hover{
+    opacity: 70%;
+ }
+ .detail-z{
+     height: 50px;
+ }
+ .zone{
+     margin-top: 15px;
+     background-color: #ffffff;
+     text-align: center;
+     gap: 2.1%;
+     display: grid;
+     grid-template-columns: 23.4% 23.4% 23.4% 23.4%;
+ }
+ .count-boot{
+     font-size: medium;
+ }
+ .addboot-btn{
+    background-color: #009c98;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 5% 0%;
+    border-bottom: solid 2px #009c98;
+    cursor: pointer;
+    font-size: large;
+    transition: 0.4s;
+}
+.addboot-btn:hover{
+    border-radius: 15px;
+    opacity: 50%;
+    }
+.EditZone-btn{
+    color: white;
+    background-color: rgb(46, 46, 46);
+    border-radius: 5px;
+    padding: 5% 0%;
+    border-bottom: solid 2px rgb(46, 46, 46);
+    cursor: pointer;
+    font-size: large;
+    transition: 0.4s;
+}
+.EditZone-btn:hover{
+    border-radius: 15px;
+    opacity: 70%;
+    }
+.deleteZone-btn{
+    color: #ffffff;
+    background-color: rgb(192, 0, 0) ;
+    border-radius: 5px;
+    padding: 5% 0%;
+    border-bottom: solid 2px  rgb(192, 0, 0) ;
+    cursor: pointer;
+    font-size: large;
+    transition: 0.4s;
+}
+.deleteZone-btn:hover{
+    border-radius: 15px;
+    opacity: 70%;
+    }
+    .container-button{
+   
+        display: grid;
+        gap: 5px;
+        grid-template-columns: auto auto ;
+    }
+    .detailBoot-btn{
+        background-color: #0084ff;
+        border-radius: 5px;
+        padding: 5% 0%;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: large;
+        transition: 0.4s;
+       
+    }
+    .detailBoot-btn:hover{
+        border-radius: 15px;
+        opacity: 70%;
+    
+    }

@@ -1,0 +1,28 @@
+
+<div class="container-index">
+    <div class="con-map-zone">
+        <img src="../assets/img/event/maps.jpg" class="map-zone">
+    </div>
+    <!-- <div class="content-center">
+    <i class="pi pi-shop" style="font-size: 1rem;"></i>
+      <p>   เลือกโซนเพื่อทําการจองบูธ</p>
+   </div> -->
+    <div class="zone">
+        <ng-container *ngFor="let zone of zones">
+            <div class="detail-zone">
+              <img src="../assets/img/zone/{{ zone.img_showzone }}" class="img-zone">
+            
+              <p class="name_zone"><i class="pi pi-shop" style="font-size: 1rem; margin-right: 5px;"></i>โซน {{ zone.name_zone }}</p>
+              <!-- <p  class="detail-z">รายละเอียด </p>
+              <p  class="detail-z">{{ zone.detail_zone }}</p> -->
+              <p class="detail-z">จำนวน : {{ zone.boot_count }} บูธ</p>
+              <button class="reserva-btn" (click)="reserveZone(zone.id_zone)"><i class="material-icons">add_box</i>จองบูธ</button> 
+            </div>
+          </ng-container>
+
+    </div>
+    <div class="content-center">
+      <p>ระบบจองบูธงานเกษตรเเฟร์</p>
+      <p style="font-weight: 200;">มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตเฉลิมพระเกียรติ จังหวัดสกลนคร</p>
+   </div>
+</div>

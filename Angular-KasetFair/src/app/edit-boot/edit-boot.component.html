@@ -1,0 +1,17 @@
+<p>add-boot works!</p>
+<input type="text" placeholder="หมายเลขบูธ" #number_boot>
+<br>
+<input type="text" placeholder="ราคา" #price>
+<br>
+<input type="text" placeholder="ขนาดบูธ" #boot_size>
+<br>
+<select  #status_boot>
+    <option>ว่าง</option>
+    <option>อยู่ระหว่างตรวจสอบ</option>
+</select>
+<!-- <input type="text" placeholder="สถานะบูธ" #status_boot>
+<br> -->
+<p>รูปภาพบูธ</p>
+<input type="file" placeholder="รูปภาพบูธ" (change)="onFileSelected($event, 'img_boot')">
+<br>
+<button type="submit" (click)="EditBoot(number_boot.value, status_boot.value, price.value, boot_size.value)">บันทึกข้อมูล</button>
